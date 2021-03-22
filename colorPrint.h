@@ -194,6 +194,7 @@
  *	\author Thomas Cocquebert
  *	\date 22/03/2021
 */
+#define BACK_COLOR_WHITE 	47
 /**	\def TEXT_COLOR_BLACK
  *	\brief Define the TEXT_COLOR_BLACK value
  *

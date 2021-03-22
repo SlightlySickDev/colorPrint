@@ -27,9 +27,21 @@ testFile:	testFile.o colorPrint.o
 	$(CC) -Wall -g -o testFile testFile.o colorPrint.o
 
 #############################################
+# Generate the doxygen documentation
+dox:
+	doxygen Doxyfile
+
+latex:	dox
+	make -C doc/latex/
+
+
+#############################################
 # Miscellous command
-all:	testFile
+all:	testFile dox latex
 	$(CC) -Wall -g -o testFile testFile.o colorPrint.o
+	doxygen Doxyfile
+	make -C doc/latex/
 
 clean:	
-	rm *.o main
+	-rm *.o testFile
+	-rm -rf doc/

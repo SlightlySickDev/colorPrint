@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 # Executable file
-main
+testFile
 
 # Miscellaneous files
 doc/

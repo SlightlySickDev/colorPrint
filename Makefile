@@ -17,19 +17,19 @@ colorPrint.o:	colorPrint.c
 	$(CC) -Wall -g -c colorPrint.c
 
 #############################################
-# Build main.o
-main.o:	colorPrint.h main.c
-	$(CC) -Wall -g -c main.c
+# Build testFile.o
+testFile.o:	colorPrint.h testFile.c
+	$(CC) -Wall -g -c testFile.c
 
 #############################################
-# Build main executable
-main:	main.o colorPrint.o
-	$(CC) -Wall -g -o main main.o colorPrint.o
+# Build the testFile executable
+testFile:	testFile.o colorPrint.o
+	$(CC) -Wall -g -o testFile testFile.o colorPrint.o
 
 #############################################
 # Miscellous command
-all:	main
-	$(CC) -Wall -g -o main main.o colorPrint.o
+all:	testFile
+	$(CC) -Wall -g -o testFile testFile.o colorPrint.o
 
 clean:	
 	rm *.o main
